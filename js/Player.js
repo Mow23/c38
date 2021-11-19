@@ -4,10 +4,10 @@ class Player {
     this.index = null;
     this.positionX = 0;
     this.positionY = 0;
-    this.rank = 0;
+    /*this.rank = 0;
     this.fuel = 185;
     this.life = 185;
-    this.score = 0;
+    this.score = 0;*/
   }
 
   addPlayer() {
@@ -23,9 +23,9 @@ class Player {
       name: this.name,
       positionX: this.positionX,
       positionY: this.positionY,
-      rank: this.rank,
+      /*rank: this.rank,
       score: this.score,
-      life: this.life
+      life: this.life*/
     });
   }
 
@@ -53,11 +53,11 @@ class Player {
 
   update() {
     var playerIndex = "players/player" + this.index;
-    database.ref(playerIndex).update({
+    database.ref("/").update({
       positionX: this.positionX,
       positionY: this.positionY,
-      rank: this.rank,
-      score: this.score
+    /*  rank: this.rank,
+      score: this.score*/
     });
   }
 
